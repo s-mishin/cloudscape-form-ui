@@ -1,0 +1,49 @@
+{
+  "name": "@cloudscape-design/hook-forms",
+  "description": "Библиотека интеграции @cloudscape-design с react-hook-forms",
+  "version": "1.0.2",
+  "private": false,
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dev-sergey-mishin/cloudscape-form-ui"
+  },
+  "scripts": {
+    "format": "biome check --write",
+    "lint": "biome check && tsc --noEmit",
+    "types": "yarn tsc",
+    "build": "rslib build --config rslib.config.ts",
+    "dev": "rslib build --watch"
+  },
+  "peerDependencies": {
+    "@cloudscape-design/components": "3.0.1128",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "react-hook-form": "7.66.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.3.5",
+    "@cloudscape-design/components": "3.0.1128",
+    "@rslib/core": "^0.17.1",
+    "@types/react": "19.2.2",
+    "@types/react-dom": "19.2.2",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "react-hook-form": "7.66.0",
+    "typescript": "5.9.3"
+  },
+  "packageManager": "yarn@1.22.22"
+}
