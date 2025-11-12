@@ -6,6 +6,7 @@ export default defineConfig({
 
   output: {
     target: 'node',
+    cleanDistPath: false,
     distPath: {
       js: '',
       css: '',
@@ -16,6 +17,9 @@ export default defineConfig({
       css: '[name].css',
     },
     legalComments: 'none',
+    copy: {
+      patterns: [{ from: './package.json' }],
+    },
   },
 
   source: {
