@@ -1,6 +1,8 @@
+import { pluginReact } from '@rsbuild/plugin-react';
 import { defineConfig } from '@rslib/core';
 
 export default defineConfig({
+  plugins: [pluginReact()],
   lib: [
     {
       format: 'esm',
@@ -15,7 +17,7 @@ export default defineConfig({
     },
   ],
   output: {
-    target: 'node',
+    target: 'web',
     distPath: {
       root: 'dist',
     },

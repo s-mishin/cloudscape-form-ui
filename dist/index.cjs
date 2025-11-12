@@ -26,26 +26,28 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.d(__webpack_exports__, {
     FormInput: ()=>FormInput
 });
+const jsx_runtime_namespaceObject = require("react/jsx-runtime");
 const components_namespaceObject = require("@cloudscape-design/components");
 const external_react_hook_form_namespaceObject = require("react-hook-form");
 function FormInput(props) {
-    return /*#__PURE__*/ React.createElement(external_react_hook_form_namespaceObject.Controller, {
+    return /*#__PURE__*/ (0, jsx_runtime_namespaceObject.jsx)(external_react_hook_form_namespaceObject.Controller, {
         name: props.name,
         control: props.control,
         rules: props.rules,
-        render: ({ field, fieldState })=>/*#__PURE__*/ React.createElement(components_namespaceObject.FormField, {
+        render: ({ field, fieldState })=>/*#__PURE__*/ (0, jsx_runtime_namespaceObject.jsx)(components_namespaceObject.FormField, {
                 label: props.label,
                 description: props.description,
                 constraintText: props.constraintText,
                 errorText: fieldState.error?.message,
-                stretch: true
-            }, /*#__PURE__*/ React.createElement(components_namespaceObject.Input, {
-                ...field,
-                value: field.value,
-                onChange: (event)=>field.onChange(event.detail.value),
-                placeholder: props.placeholder,
-                invalid: !!fieldState.error?.message
-            }))
+                stretch: true,
+                children: /*#__PURE__*/ (0, jsx_runtime_namespaceObject.jsx)(components_namespaceObject.Input, {
+                    ...field,
+                    value: field.value,
+                    onChange: (event)=>field.onChange(event.detail.value),
+                    placeholder: props.placeholder,
+                    invalid: !!fieldState.error?.message
+                })
+            })
     });
 }
 exports.FormInput = __webpack_exports__.FormInput;

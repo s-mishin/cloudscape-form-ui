@@ -37,7 +37,8 @@
   "devDependencies": {
     "@biomejs/biome": "2.3.5",
     "@cloudscape-design/components": "3.0.1128",
-    "@rslib/core": "^0.17.1",
+    "@rsbuild/plugin-react": "1.4.2",
+    "@rslib/core": "0.17.1",
     "@types/react": "19.2.2",
     "@types/react-dom": "19.2.2",
     "react": "19.2.0",
