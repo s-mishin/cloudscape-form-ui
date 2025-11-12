@@ -1,0 +1,6 @@
+src/
+node_modules/
+rsbuild.config.ts
+tsconfig.json
+*.tgz
+*.log
