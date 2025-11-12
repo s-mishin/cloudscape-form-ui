@@ -24,7 +24,8 @@ var __webpack_require__ = {};
 var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 __webpack_require__.d(__webpack_exports__, {
-    FormInput: ()=>FormInput
+    FormInput: ()=>FormInput,
+    FormTextarea: ()=>FormTextarea
 });
 const jsx_runtime_namespaceObject = require("react/jsx-runtime");
 const components_namespaceObject = require("@cloudscape-design/components");
@@ -50,9 +51,33 @@ function FormInput(props) {
             })
     });
 }
+function FormTextarea(props) {
+    return /*#__PURE__*/ (0, jsx_runtime_namespaceObject.jsx)(external_react_hook_form_namespaceObject.Controller, {
+        name: props.name,
+        control: props.control,
+        rules: props.rules,
+        render: ({ field, fieldState })=>/*#__PURE__*/ (0, jsx_runtime_namespaceObject.jsx)(components_namespaceObject.FormField, {
+                label: props.label,
+                description: props.description,
+                constraintText: props.constraintText,
+                errorText: fieldState.error?.message,
+                stretch: true,
+                children: /*#__PURE__*/ (0, jsx_runtime_namespaceObject.jsx)(components_namespaceObject.Textarea, {
+                    ...field,
+                    value: field.value,
+                    onChange: (event)=>field.onChange(event.detail.value),
+                    placeholder: props.placeholder,
+                    invalid: !!fieldState.error?.message,
+                    rows: props.rows
+                })
+            })
+    });
+}
 exports.FormInput = __webpack_exports__.FormInput;
+exports.FormTextarea = __webpack_exports__.FormTextarea;
 for(var __webpack_i__ in __webpack_exports__)if (-1 === [
-    "FormInput"
+    "FormInput",
+    "FormTextarea"
 ].indexOf(__webpack_i__)) exports[__webpack_i__] = __webpack_exports__[__webpack_i__];
 Object.defineProperty(exports, '__esModule', {
     value: true
